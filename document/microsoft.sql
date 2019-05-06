@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Máy chủ: 127.0.0.1
--- Thời gian đã tạo: Th5 05, 2019 lúc 07:34 PM
+-- Thời gian đã tạo: Th5 06, 2019 lúc 03:51 PM
 -- Phiên bản máy phục vụ: 10.1.25-MariaDB
 -- Phiên bản PHP: 7.1.7
 
@@ -785,7 +785,7 @@ CREATE TABLE `users` (
 
 INSERT INTO `users` (`id`, `name`, `email`, `password`, `remember_token`, `created_at`, `updated_at`, `username`, `user_type`) VALUES
 (1, 'tienlq', 'quangtienvkt@gmail.com', '$2y$10$qDSM1xhz.Tk7dgDP1vvIpO7oDFWK7tyqndVivchYpBEHoK62YyvCu', 'bgVoxISakUH06RImbJpWaiDB74hqAkpb2RDgljl39csxJY323jZb23onjG0Y', '2019-01-30 02:49:15', '2019-01-30 02:49:15', 'tienlq', ''),
-(5, 'admin', 'quangtienvkt@gmail.com', '$2y$10$xS.w4lODyZETLIuENs1BXuRn3RnUTu6KdZ7fUTsP572VHJiZn3ika', 'xPBV1dO3oGpKU7hxcvb9QhRssLBB0Iuvb2jNl1vYIxKMyAz8G63obmWhGn3U', '2019-01-30 02:49:15', '2019-04-30 18:05:58', 'admin', NULL);
+(5, 'admin', 'quangtienvkt@gmail.com', '$2y$10$xS.w4lODyZETLIuENs1BXuRn3RnUTu6KdZ7fUTsP572VHJiZn3ika', 'WSpXmjUHLXFTMmS4fZ2cW1H5kOXkjAs0wJqEmmJ2f8L7JcC03Ns9JN2kyanf', '2019-01-30 02:49:15', '2019-04-30 18:05:58', 'admin', NULL);
 
 --
 -- Chỉ mục cho các bảng đã đổ

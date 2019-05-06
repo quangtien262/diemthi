@@ -1,8 +1,0 @@
-{
-  "phpfmt.psr2": false,
-  "phpfmt.enable_auto_align": true,
-  "crane.showStatusBarBugReportLink": true,
-  "phpfmt.cakephp": true,
-  "vscode-php-cs-fixer.allowRisky": true,
-  "git.ignoreLimitWarning": true
-}

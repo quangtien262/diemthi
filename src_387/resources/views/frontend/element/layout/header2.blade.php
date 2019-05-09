@@ -11,7 +11,7 @@
         </div>
         <div id="navbar" class="navbar-collapse collapse">
             @php $config = app('EntityCommon')->getDataById('configweb', 1);  @endphp
-            <img id="logo" src="{{ $config->logo }}">
+            <img  src="{{ $config->logo }}">
             {!! app('ClassCategory')->htmlCategory() !!}
             <ul class="nav navbar-nav navbar-right">
                 <li>

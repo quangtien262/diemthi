@@ -49,3 +49,25 @@
     height: 25px;
     margin-top: 12px;
 }
+
+.navbar {
+    background: #cc0200
+}
+
+.navbar a {
+    color: #ffffff !important
+}
+
+.navbar-default .navbar-nav>.open>a,
+.navbar-default .navbar-nav>.open>a:focus,
+.navbar-default .navbar-nav>.open>a:hover {
+    background-color: #ef2f2f !important;
+}
+
+.dropdown-menu {
+    background-color: #cc0200 !important;
+}
+
+.dropdown-menu a:hover {
+    background-color: #ef2f2f !important;
+}

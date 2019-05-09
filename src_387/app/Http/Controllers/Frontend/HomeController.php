@@ -22,6 +22,6 @@ class HomeController extends Controller
         $landingPage = LandingPage::getLandingPageByCategoryId(13);
         $landingPageItem = LandingPageItem::getByLandingPageId($landingPage->landingPageId);
 
-        return view('frontend.home', compact('landingPageItem', 'news', 'product'));
+        return view('frontend.pages.home', compact('landingPageItem', 'news', 'product'));
     }
 }

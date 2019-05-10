@@ -144,15 +144,25 @@
 }
 
 .main-pho-diem {
-    height: 300px;
+    height: 510px;
+    width: 1175px;
 }
 
-.item-col-phodiem {
-    width: 15px;
-    background: #cccccc;
+.item-phodiem {
+    width: 13px;
+    background: #ffffff;
     float: left;
     margin-right: 10px;
-    top: 0px
+}
+
+.col-phodiem01 {
+    width: 100%;
+    background: #fff;
+}
+
+.col-phodiem02 {
+    width: 100%;
+    background: #cccccc;
 }
 
 #search-title {
@@ -163,6 +173,22 @@
     color: #0ec809
 }
 
-._red {
-    color: red
+.diem22 {
+    color: red;
+    padding-left: 4px;
+}
+
+span.thang-diem {
+    width: 16px;
+    height: 17px;
+    -ms-transform: rotate(90deg) !important;
+    -webkit-transform: rotate(90deg) !important;
+    transform: rotate(90deg) !important;
+    display: block;
+    font-size: 12px;
+}
+
+.item-thang-diem {
+    float: left;
+    width: 23px;
 }

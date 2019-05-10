@@ -1,0 +1,7 @@
+﻿Sau khi đẩy code lên server và import database xong em làm theo các bước sau nhé:
+1, config thông tin kết nối đến database ở trong file .env ở ngay ngoài cùng của project
+2, phân quyền thư mục 2 cache của web là: storage và bootstrap là 755 (nếu không được thì em config là 777 thử xem nhé)
+3, done, lên web chạy thử xem
+4, vào trang quản trị của website theo đường dẫn: /admin
+user: admin
+pass: abcd@1234

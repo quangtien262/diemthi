@@ -36,6 +36,10 @@ class AppServiceProvider extends ServiceProvider
             return new \App\Services\Utils\ClassValidationRequest;
         });
         
+        $this->app->singleton(
+                'FrontendUtils', function () {
+            return new \App\Services\Utils\FrontendUtils;
+        });
         //Entity
         $this->app->singleton(
                 'ClassTables', function () {

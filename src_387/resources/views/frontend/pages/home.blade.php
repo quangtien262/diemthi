@@ -103,7 +103,6 @@
                     </td>   
                 </tr>
                 @endif
-                
             </thead>
         </table>
     </div>
@@ -117,43 +116,57 @@
     </div>
     <div class="row">
         <div id="content-left" class="col-xs-12 col-sm-6 col-md-8">
-            <div class="row">
-                <div class="col-xs-6 news-item">
-                    <img class="img-responsive"
-                        src="http://cdn.baogiaothong.vn/upload/images/2019-2/article_avatar_img/2019-05-09/20190314-094903-1552823154-width333height196-1557402044-width333height196.jpg">
-                    <h3>Xây bãi xe ngầm trong công viên Cầu Giấy: Hơn 60% người dân đồng thuận</h3>
-                    <p>
-                        Theo kết quả được công bố, hơn 60% người dân được lấy ý kiến đồng thuận với việc xây bãi xe ngầm
-                        trong công viên Cầu Giấy.
-                    </p>
+            @php  $idx = 0;  @endphp
+            @foreach($news as $n)
+                @php  $idx++;  @endphp
+                @if($idx == 1)
+                <div class="row">
+                    <div class="col-xs-6 news-item">
+                        <a href="{{ $n->link }}">
+                            <img class="img-responsive" title="{{ $n->name }}" alt="{{ $n->name }}" src="{{ $n->image }}">
+                            <h3>{{ $n->name }}</h3>
+                        </a>
+                        <p>{{ $n->description }}</p>
+                    </div>
+                @elseif($idx == 2)    
+                    <div class="col-xs-6 news-item">
+                        <a href="{{ $n->link }}">
+                            <img class="img-responsive" title="{{ $n->name }}" alt="{{ $n->name }}" src="{{ $n->image }}">
+                            <h3>{{ $n->name }}</h3>
+                        </a>
+                        <p>{{ $n->description }}</p>
+                    </div>
                 </div>
-                <div class="col-xs-6 news-item">
-                    <img class="img-responsive"
-                        src="http://cdn.baogiaothong.vn/upload/images/2019-2/article_avatar_img/2019-05-09/20190314-094903-1552823154-width333height196-1557402044-width333height196.jpg">
-                    <h3>Xây bãi xe ngầm trong công viên Cầu Giấy: Hơn 60% người dân đồng thuận</h3>
-                    <p>
-                        Theo kết quả được công bố, hơn 60% người dân được lấy ý kiến đồng thuận với việc xây bãi xe ngầm
-                        trong công viên Cầu Giấy.
-                    </p>
+                @elseif($idx == 3)
+                <div class="row">
+                    <div class="col-xs-6 news-item col-md-4">
+                        <a href="{{ $n->link }}">
+                            <img class="img-responsive" title="{{ $n->name }}" alt="{{ $n->name }}" src="{{ $n->image }}">
+                            <h3>{{ $n->name }}</h3>
+                        </a>
+                    </div>
+                @elseif($idx == 4)
+                    <div class="col-xs-6 news-item col-md-4">
+                        <a href="{{ $n->link }}">
+                            <img class="img-responsive" title="{{ $n->name }}" alt="{{ $n->name }}" src="{{ $n->image }}">
+                            <h3>{{ $n->name }}</h3>
+                        </a>
+                    </div> 
+                @elseif($idx == 5)
+                    <div class="col-xs-6 news-item col-md-4">
+                        <a href="{{ $n->link }}">
+                            <img class="img-responsive" title="{{ $n->name }}" alt="{{ $n->name }}" src="{{ $n->image }}">
+                            <h3>{{ $n->name }}</h3>
+                        </a>
+                    </div>   
+                </div>    
+                @php $idx = 0; @endphp              
+                @endif
+            @endforeach
+
+            @if($idx == 1 || $idx == 3 || $idx == 4) 
                 </div>
-            </div>
-            <div class="row">
-                <div class="col-xs-6 news-item col-md-4">
-                    <img class="img-responsive"
-                        src="http://cdn.baogiaothong.vn/upload/images/2019-2/article_avatar_img/2019-05-09/20190314-094903-1552823154-width333height196-1557402044-width333height196.jpg">
-                    <h3>Xây bãi xe ngầm trong công viên Cầu Giấy: Hơn 60% người dân đồng thuận</h3>
-                </div>
-                <div class="col-xs-6 news-item col-md-4">
-                    <img class="img-responsive"
-                        src="http://cdn.baogiaothong.vn/upload/images/2019-2/article_avatar_img/2019-05-09/20190314-094903-1552823154-width333height196-1557402044-width333height196.jpg">
-                    <h3>Xây bãi xe ngầm trong công viên Cầu Giấy: Hơn 60% người dân đồng thuận</h3>
-                </div>
-                <div class="col-xs-6 news-item col-md-4">
-                    <img class="img-responsive"
-                        src="http://cdn.baogiaothong.vn/upload/images/2019-2/article_avatar_img/2019-05-09/20190314-094903-1552823154-width333height196-1557402044-width333height196.jpg">
-                    <h3>Xây bãi xe ngầm trong công viên Cầu Giấy: Hơn 60% người dân đồng thuận</h3>
-                </div>
-            </div>
+            @endif
         </div>
         <div id="content-right" class="col-xs-6 news-item col-md-4">
             @foreach($adRight as $ad) 
@@ -175,11 +188,29 @@
         <span>|</span>
         <a href="">Ngoại ngữ</a>
     </div>
-    <div class="clean"><br /></div>
+    <div class="clean"><br/></div>
     <div class="row main-pho-diem">
-        <div class="item-col-phodiem" style="height:100px"></div>
-        <div class="item-col-phodiem" style="height:200px"></div>
-        <div class="item-col-phodiem" style="height:300px"></div>
+        @for($i=0; $i<=10; $i=$i+0.2)
+            
+            <div class="item-phodiem">
+                {{--  app('FrontendUtils')->getPercentPoint('toan', $i)  --}}
+                <div class="col-phodiem01" style="height:495px"></div>
+                <div class="col-phodiem02" style="height:5px"></div>
+            </div>
+        @endfor
+    </div>
+    <div class="row">
+        @php $idx = 0; @endphp
+    @for($i=0; $i<=10; $i=$i+0.2)
+        @php $idx++; @endphp
+        <div class="item-thang-diem">
+            @if(in_array($idx, [1,6,11,16,21,26,31,36,41,46,51]))
+                <span class="_red diem22">{{ $i  }}</span>
+            @else
+                <span class="thang-diem">{{ $i }}</span>
+            @endif
+        </div>
+    @endfor
     </div>
 </div>
 

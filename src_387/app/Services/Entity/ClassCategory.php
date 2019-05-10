@@ -11,6 +11,7 @@ class ClassCategory
         $categorys = Category::select([
         'category.id as cateId',
         'category.name as cateName',
+        'category.link',
         'route.route_name as routeName',
         'route.id as routeId',
         ])
@@ -43,12 +44,18 @@ class ClassCategory
                 $aAttr = 'class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"';
                 $subData .= '<ul class="dropdown-menu">';
                 foreach ($subCate as $sub) {
-                    $subLink = self::getLinkCategory($sub);
+                    $subLink = $sub->link;
+                    if(!empty($sub->routeName)) {
+                        $subLink = self::getLinkCategory($sub);
+                    }
                     $subData .= '<li><a href="'.$subLink.'" title="'.$sub->cateName.'">'.$sub->cateName.'</a></li>';
                 }
                 $subData .= '</ul>';
             }
-            $link = self::getLinkCategory($cate);
+            $link = $cate->link;
+            if(!empty($cate->routeName)) {
+                $link = self::getLinkCategory($cate);
+            }
             $html .= '<li class="'.$liClass.'"><a '.$aAttr.' href="'.$link.'" title="'.$cate->cateName.'">'.$cate->cateName.$iconDown.'</a>'.$subData.'</li>';
         }
         $html .= '</ul>';

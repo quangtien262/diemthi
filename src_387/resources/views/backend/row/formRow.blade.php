@@ -40,8 +40,10 @@
                 }
             }
         }
-
-        document.getElementById("images").addEventListener("change", readFile);
+        if(document.getElementById("images")) {
+            document.getElementById("images").addEventListener("change", readFile);
+        }
+        
         //End upload multiple images
 
 

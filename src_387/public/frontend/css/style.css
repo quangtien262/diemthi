@@ -46,12 +46,11 @@
 
 #logo {
     float: left;
-    height: 25px;
-    margin-top: 12px;
+    margin-top: 10px;
 }
 
 .navbar {
-    background: #cc0200
+    background: #cc0200;
 }
 
 .navbar a {
@@ -70,4 +69,100 @@
 
 .dropdown-menu a:hover {
     background-color: #ef2f2f !important;
+}
+
+.banner {
+    margin-top: -20px;
+    width: 100%;
+}
+
+.navbar-fixed-top {
+    border: 0px
+}
+
+.main-icon-banner {
+    margin-top: -30px
+}
+
+.btn-tra-cuu {
+    padding: 7px 100px;
+    background: #efefef;
+    color: #cc0200;
+    font-weight: bold;
+    font-size: 18px;
+    margin-top: 20px
+}
+
+.ad01 {
+    width: 100%
+}
+
+.ad02 {
+    width: 100%
+}
+
+.main-ad01 {
+    padding: 15px
+}
+
+.tinmoi {
+    font-size: 15px;
+    font-weight: bold
+}
+
+#content-left {
+    border-top: 1px #ccc dotted;
+    padding-top: 20px
+}
+
+.news-item h3 {
+    font-weight: bold;
+    font-size: 14px
+}
+
+.news-item p {
+    font-size: 12px
+}
+
+.menu-pho-diem {
+    background: #e0e0e0
+}
+
+.menu-pho-diem b {
+    color: red;
+    font-size: 15px
+}
+
+.menu-pho-diem a {
+    color: #000000 !important;
+    font-size: 13px;
+    padding: 10px
+}
+
+.menu-pho-diem a.active {
+    font-weight: bold
+}
+
+.main-pho-diem {
+    height: 300px;
+}
+
+.item-col-phodiem {
+    width: 15px;
+    background: #cccccc;
+    float: left;
+    margin-right: 10px;
+    top: 0px
+}
+
+#search-title {
+    font-weight: bold
+}
+
+._success {
+    color: #0ec809
+}
+
+._red {
+    color: red
 }

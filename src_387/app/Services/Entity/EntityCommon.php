@@ -21,7 +21,7 @@ class EntityCommon
      * $order: sort order
      */
 
-    public function getRowsByConditions($tblName, $conditions, $limit = 0, $order = ['sort_order', 'asc'], $whereInConditions = [])
+    public function getRowsByConditions($tblName, $conditions = [], $limit = 0, $order = ['sort_order', 'asc'], $whereInConditions = [])
     {
         //select table
         $data = DB::table($tblName);

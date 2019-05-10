@@ -11,26 +11,8 @@
         </div>
         <div id="navbar" class="navbar-collapse collapse">
             @php $config = app('EntityCommon')->getDataById('configweb', 1);  @endphp
-            <img  src="{{ $config->logo }}">
+            <a href="/"><img id="logo" src="{{ $config->logo }}"/></a>
             {!! app('ClassCategory')->htmlCategory() !!}
-            <ul class="nav navbar-nav navbar-right">
-                <li>
-                    <a>
-                        <div class="topnav">
-
-                            <div class="search-container">
-                                <form action="">
-                                    <input type="text" placeholder="Tìm kiếm..." name="keyword">
-                                    <button type="submit"><i class="fa fa-search"></i></button>
-                                </form>
-                            </div>
-                        </div>
-                    </a>
-                </li>
-
-                <!--            <li><a href="">Static top</a></li>
-                            <li class="active"><a href="">Fixed top <span class="sr-only">(current)</span></a></li>-->
-            </ul>
         </div>
         <!--/.nav-collapse -->
     </div>

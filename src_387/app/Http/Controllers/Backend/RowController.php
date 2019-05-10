@@ -143,8 +143,33 @@ class RowController extends BackendController {
                     $results = $reader->get();
                 })->get();
         $data      = json_decode(json_encode($excelData), true);
-     
-        $result = app('EntityCommon')->insertData($table->name, $data, true);
+        \DB::beginTransaction();
+        try {
+            $dataInsert = [];
+            foreach($data as $idx => $d) {
+                if(isset($d['stt'])) {
+                    unset($d['stt']);
+                }
+                //diem thi
+                if($table->name == 'diem_thi_thpt') {
+                    $d = app('ClassCommon')->getPointFromString($d['diem_thi'], $d);
+                }
+
+                $dataInsert[] = $d;
+                if ($idx % 99 == 0){
+                    app('EntityCommon')->insertData($table->name, $dataInsert, true);
+                    unset($dataInsert); 
+                    $dataInsert = [];
+                }
+            }
+            if(!empty($dataInsert)) {
+                app('EntityCommon')->insertData($table->name, $dataInsert, true);
+            }
+            \DB::commit();
+        } catch (\Exception $e) {
+            \DB::rollback();
+            return $e->getMessage();
+        }
         
         return back();
     }

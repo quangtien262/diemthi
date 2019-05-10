@@ -87,4 +87,26 @@ class ClassCommon
         return $html;
     }
 
+    public function getPointFromString($string, $result)
+    {
+        $point = [
+            'toan' =>'Toán:',
+            'ngu_van' =>'Ngữ văn:',
+            'lich_su' =>'Lịch sử:',
+            'dia_ly' =>'Địa lí:',
+            'gdcd' =>'GDCD:',
+            'khxh' =>'KHXH:',
+            'tieng_anh' =>'Tiếng Anh:',
+        ];
+        foreach($point as $key => $val) {
+            
+            $pointExplode = explode($val, $string);
+            $count = count($pointExplode);
+            if(!empty($pointExplode)) {
+                $result[$key] = (float) $pointExplode[($count-1)];
+            }
+        }
+        return $result;
+    }
+
 }

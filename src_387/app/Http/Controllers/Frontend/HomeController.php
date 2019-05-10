@@ -5,9 +5,9 @@ namespace App\Http\Controllers\Frontend;
 use App\Http\Controllers\Controller;
 use App\Model\LandingPage;
 use App\Model\LandingPageItem;
-use App\Model\News;
-use App\Model\Product;
-
+use App\Model\DiemThiThpt;
+use App\Model\TuyenSinh;
+use Illuminate\Http\Request;
 class HomeController extends Controller
 {
     /**
@@ -15,13 +15,17 @@ class HomeController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function index(Request $request)
     {
-        $product = Product::orderBy('sort_order', 'desc')->take(4)->get();
-        $news = News::orderBy('sort_order', 'desc')->take(4)->get();
-        $landingPage = LandingPage::getLandingPageByCategoryId(13);
-        $landingPageItem = LandingPageItem::getByLandingPageId($landingPage->landingPageId);
+        if(!empty($request->sbd)) {
+            $diemThiThpt = DiemThiThpt::search($request);
+        }
+        $banner = app('EntityCommon')->getDataById('banner', 1);
+        $adTop = app('EntityCommon')->getDataById('ad_top', 1);
+        $adRight = app('EntityCommon')->getRowsByConditions('ad_right');
+        $news = app('EntityCommon')->getRowsByConditions('news_data');
+        $config = app('EntityCommon')->getDataById('configweb', 1);
 
-        return view('frontend.pages.home', compact('landingPageItem', 'news', 'product'));
+        return view('frontend.pages.home', compact('diemThiThpt', 'banner', 'adRight', 'adTop', 'news', 'config'));
     }
 }

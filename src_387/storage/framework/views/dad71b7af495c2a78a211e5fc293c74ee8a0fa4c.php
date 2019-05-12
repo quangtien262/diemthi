@@ -192,8 +192,8 @@
             
             <div class="item-phodiem">
                 
-                <div class="col-phodiem01" style="height:490px"></div>
-                <div class="col-phodiem02" style="height:10px"></div>
+                <div class="col-phodiem01" style="height:495px"></div>
+                <div class="col-phodiem02" style="height:5px"></div>
             </div>
         <?php endfor; ?>
     </div>

@@ -8,9 +8,15 @@
     </a>
 </div>
 <div class="row main-icon-banner">
-    <a href=""><img src="/frontend/image/icon_diemthi_thpt.png"></a>
-    <a href=""><img src="/frontend/image/icon-diem-thi-tuyen-sinh.png"></a>
-    <a href=""><img src="/frontend/image/icon-tin-tuc.png"></a>
+    @if($agent->isMobile()) 
+        <a href=""><img style="width:80px; margin-top:15px;" src="/frontend/image/icon_diemthi_thpt.png"></a>
+        <a href=""><img style="width:80px; margin-top:15px" src="/frontend/image/icon-diem-thi-tuyen-sinh.png"></a>
+        <a href=""><img style="width:80px; margin-top:15px" src="/frontend/image/icon-tin-tuc.png"></a>
+    @else
+        <a href=""><img src="/frontend/image/icon_diemthi_thpt.png"></a>
+        <a href=""><img src="/frontend/image/icon-diem-thi-tuyen-sinh.png"></a>
+        <a href=""><img src="/frontend/image/icon-tin-tuc.png"></a>
+    @endif
 </div>
 <div class="row main-form-search">
     <form method="GET" action="">
@@ -189,28 +195,12 @@
         <a href="">Ngoại ngữ</a>
     </div>
     <div class="clean"><br/></div>
-    <div class="row main-pho-diem">
-        @for($i=0; $i<=10; $i=$i+0.2)
-            
-            <div class="item-phodiem">
-                {{--  app('FrontendUtils')->getPercentPoint('toan', $i)  --}}
-                <div class="col-phodiem01" style="height:495px"></div>
-                <div class="col-phodiem02" style="height:5px"></div>
-            </div>
-        @endfor
-    </div>
-    <div class="row">
-        @php $idx = 0; @endphp
-    @for($i=0; $i<=10; $i=$i+0.2)
-        @php $idx++; @endphp
-        <div class="item-thang-diem">
-            @if(in_array($idx, [1,6,11,16,21,26,31,36,41,46,51]))
-                <span class="_red diem22">{{ $i  }}</span>
-            @else
-                <span class="thang-diem">{{ $i }}</span>
-            @endif
-        </div>
-    @endfor
+    @if($agent->isMobile())
+        @include('frontend.element.home.phodiemMobile')
+    @else
+        @include('frontend.element.home.phodiem')
+    @endif
+    
     </div>
 </div>
 

@@ -230,12 +230,14 @@ class ClassTables
         if (count($tables) > 0) {
             $html .= '<ul>';
             foreach ($tables as $table) {
-                $countData = app('EntityCommon')->getCountData($table->name);
+                
                 $subdata = self::getHtmlMenuAdmin($table->id);
                 if ($subdata != '') {
                     $icon = '<span class="nav-icon"><em class="ion-android-arrow-dropdown" style="font-size: 18px;line-height: 25px;"></em></span>';
+                    $countData = '';
                 } else {
                     $icon = '<span class="nav-icon"><em class="ion-arrow-right-b" style="font-size: 12px;line-height: 25px;"></em></span>';
+                    $countData = app('EntityCommon')->getCountData($table->name);  
                 }
                 $html .= '<li>
                         <a class="ripple" href="'.route('listDataTbl', [$table->id]).'">

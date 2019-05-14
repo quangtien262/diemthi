@@ -29,7 +29,6 @@
     </div>
     <div style="margin-top: 70px;background:#f2f2f2;" class="footer">
         @include('frontend.element.layout.footer')
-        
     </div>
 </body>
 

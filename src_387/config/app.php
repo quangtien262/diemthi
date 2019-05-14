@@ -185,7 +185,7 @@ return [
         Maatwebsite\Excel\ExcelServiceProvider::class,
 
 //        check mobile
-        // Jenssegers\Agent\AgentServiceProvider::class,
+        Jenssegers\Agent\AgentServiceProvider::class,
 
         //cart
         // Gloudemans\Shoppingcart\ShoppingcartServiceProvider::class

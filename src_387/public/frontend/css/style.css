@@ -192,3 +192,18 @@ span.thang-diem {
     float: left;
     width: 23px;
 }
+
+.row {
+    max-width: 1004px
+}
+
+.container {
+    max-width: 1004px;
+}
+
+@media (min-width: 768px) {
+    .navbar-nav>li {
+        margin-right: -11px;
+        font-size: 12px;
+    }
+}

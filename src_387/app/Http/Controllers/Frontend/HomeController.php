@@ -8,6 +8,8 @@ use App\Model\LandingPageItem;
 use App\Model\DiemThiThpt;
 use App\Model\TuyenSinh;
 use Illuminate\Http\Request;
+use Jenssegers\Agent\Agent;
+
 class HomeController extends Controller
 {
     /**
@@ -25,7 +27,13 @@ class HomeController extends Controller
         $adRight = app('EntityCommon')->getRowsByConditions('ad_right');
         $news = app('EntityCommon')->getRowsByConditions('news_data');
         $config = app('EntityCommon')->getDataById('configweb', 1);
-
-        return view('frontend.pages.home', compact('diemThiThpt', 'banner', 'adRight', 'adTop', 'news', 'config'));
+        $agent = new Agent();
+        $pId = 1;
+        if(isset($request->p) && intval($request->p) > 0) {
+            $pId = intval($pId);
+        }
+        $phodiem = app('EntityCommon')->getDataById('phodiem', $pId);
+        return view('frontend.pages.home', 
+            compact('diemThiThpt', 'banner', 'adRight', 'adTop', 'news', 'config', 'agent', 'phodiem'));
     }
 }

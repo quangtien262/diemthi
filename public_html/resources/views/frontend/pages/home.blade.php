@@ -2,11 +2,11 @@
 
 @section('content')
 
-<div class="row">
+
     <a href="{{ $banner->link or '' }}" target="_new">
         <img class="banner" src="{{ $banner->image or '' }}" alt="{{ $banner->name }}"/>
     </a>
-</div>
+
 <div class="row main-icon-banner">
     @if($agent->isMobile()) 
         <a href=""><img style="width:80px; margin-top:15px;" src="/frontend/image/icon_diemthi_thpt.png"></a>

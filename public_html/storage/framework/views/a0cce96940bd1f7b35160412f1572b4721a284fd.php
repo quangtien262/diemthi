@@ -1,10 +1,10 @@
 <?php $__env->startSection('content'); ?>
 
-<div class="row">
+
     <a href="<?php echo e(isset($banner->link) ? $banner->link : ''); ?>" target="_new">
         <img class="banner" src="<?php echo e(isset($banner->image) ? $banner->image : ''); ?>" alt="<?php echo e($banner->name); ?>"/>
     </a>
-</div>
+
 <div class="row main-icon-banner">
     <?php if($agent->isMobile()): ?> 
         <a href=""><img style="width:80px; margin-top:15px;" src="/frontend/image/icon_diemthi_thpt.png"></a>

@@ -21,7 +21,6 @@
     @include('frontend.element.layout.header2')
 
     <div class="container">
-        <!--start slide-->
         <div class='main_content'>
             @yield('content')
         </div>

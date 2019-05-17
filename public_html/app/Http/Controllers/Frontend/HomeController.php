@@ -28,7 +28,7 @@ class HomeController extends Controller
         $news = app('EntityCommon')->getRowsByConditions('news_data');
         $config = app('EntityCommon')->getDataById('configweb', 1);
         $agent = new Agent();
-        $pId = 2;
+        $pId = 1;
         if(isset($request->p) && intval($request->p) > 0) {
             $pId = intval($pId);
         }

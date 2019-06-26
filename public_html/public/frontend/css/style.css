@@ -102,12 +102,13 @@
 }
 
 .main-ad01 {
-    padding: 15px
+    /* padding: 15px */
 }
 
 .tinmoi {
-    font-size: 15px;
-    font-weight: bold
+    font-size: 18px;
+    font-weight: bold;
+    color: red;
 }
 
 #content-left {
@@ -117,7 +118,8 @@
 
 .news-item h3 {
     font-weight: bold;
-    font-size: 14px
+    font-size: 13px;
+    color: #000;
 }
 
 .news-item p {
@@ -125,7 +127,8 @@
 }
 
 .menu-pho-diem {
-    background: #e0e0e0
+    background: #e0e0e0;
+    margin-top: 10px;
 }
 
 .menu-pho-diem b {
@@ -166,7 +169,8 @@
 }
 
 #search-title {
-    font-weight: bold
+    font-size: 16px;
+    font-weight: bold;
 }
 
 ._success {
@@ -211,4 +215,22 @@ span.thang-diem {
 .row {
     margin-left: 0px;
     margin-right: 0px
+}
+
+._hidden {
+    display: none
+}
+
+.icon {
+    cursor: pointer;
+}
+
+.loadding {
+    font-weight: bold;
+    color: #0ec809
+}
+
+._point,
+ul.pagination li a {
+    cursor: pointer;
 }

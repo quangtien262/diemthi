@@ -4,3 +4,6 @@
 <link href="/frontend/css/ie10-viewport-bug-workaround.css" rel="stylesheet">
 <link href="/frontend/css/navbar-fixed-top.css" rel="stylesheet">
 <link href="/frontend/css/style.css" rel="stylesheet">
+<?php if($agent->isMobile()): ?> 
+    <link href="/frontend/css/style-mobile.css" rel="stylesheet">
+<?php endif; ?>

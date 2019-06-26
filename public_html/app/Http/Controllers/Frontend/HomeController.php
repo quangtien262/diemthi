@@ -23,17 +23,27 @@ class HomeController extends Controller
             $diemThiThpt = DiemThiThpt::search($request);
         }
         $banner = app('EntityCommon')->getDataById('banner', 1);
-        $adTop = app('EntityCommon')->getDataById('ad_top', 1);
         $adRight = app('EntityCommon')->getRowsByConditions('ad_right');
-        $news = app('EntityCommon')->getRowsByConditions('news_data');
+        $adTop = app('EntityCommon')->getDataById('ad_top', 1);
+        $adBot = app('EntityCommon')->getDataById('ad_bot', 1);
+        $news = app('EntityCommon')->getRowsByConditions('news_data', [], 10);
         $config = app('EntityCommon')->getDataById('configweb', 1);
+        $phodiemCate =  app('EntityCommon')->getRowsByConditions('phodiem');
         $agent = new Agent();
-        $pId = 1;
-        if(isset($request->p) && intval($request->p) > 0) {
-            $pId = intval($pId);
+        //get citys
+        $citys = app('EntityCommon')->getRowsByConditions('citys');
+        $htmlOptionCitys = '';
+        foreach($citys as $city) {
+            $htmlOptionCitys .= '<option value="'.$city->id.'">'.$city->name.'</option>';
         }
-        $phodiem = app('EntityCommon')->getDataById('phodiem', $pId);
-        return view('frontend.pages.home', 
-            compact('diemThiThpt', 'banner', 'adRight', 'adTop', 'news', 'config', 'agent', 'phodiem'));
+        //config mobile
+        $classIconTab = '';
+        $compact = compact('diemThiThpt', 'banner', 'adRight', 'adTop','adBot', 'news', 'config', 'agent', 'phodiem', 'classIconTab','htmlOptionCitys', 'phodiemCate');
+        if($agent->isMobile()) {
+            return view('frontend.pages.homeMobile', $compact);
+            
+        } 
+        return view('frontend.pages.home', $compact);
+        
     }
 }

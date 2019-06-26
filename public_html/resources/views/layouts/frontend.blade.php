@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -20,15 +21,14 @@
     <!-- Fixed navbar -->
     @include('frontend.element.layout.header2')
 
-    <div class="container">
-        <div class='main_content'>
             @yield('content')
-        </div>
-        <div class="clearfix"></div>
-    </div>
-    <div style="margin-top: 70px;background:#f2f2f2;" class="footer">
-        @include('frontend.element.layout.footer')
         
+    <div style="margin-top: 70px;background:#f2f2f2;" class="footer">
+        @if($agent->isMobile())
+            @include('frontend.element.layout.footerMobile')
+        @else
+            @include('frontend.element.layout.footer')
+        @endif
     </div>
 </body>
 

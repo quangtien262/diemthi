@@ -5,15 +5,9 @@
 
 Route::group(['middleware' => \App\Http\Middleware\Language::class], function () {
     Route::get('/', 'Frontend\HomeController@index')->name('home');
-
-    Route::get('{name}/n{id}.html', 'Frontend\NewsController@listNews')->name('news');
-    Route::get('{name}/dn{id}.html', 'Frontend\NewsController@detailNews')->name('detailNews');
-    Route::get('{name}/p{id}.html', 'Frontend\ProductController@listProduct')->name('product');
-    Route::get('{name}/dp{id}.html', 'Frontend\ProductController@detailProduct')->name('detailProduct');
-    Route::get('lien-he.html', 'Frontend\ContactController@contact')->name('contact');
-    Route::get('{name}/cn{id}.html', 'Frontend\CertificationController@index')->name('certification');
-    Route::get('{name}/l{id}.html', 'Frontend\LandingPageController@singleLandingPage')->name('singleLandingPage');
-    Route::get('{name}/ll{id}.html', 'Frontend\LandingPageController@listLandingPage')->name('listLandingPage');
+    Route::get('search-thpt', 'Frontend\SearchController@searchThpt')->name('searchThpt');
+    Route::get('search-ts10', 'Frontend\SearchController@searchTs10')->name('search10');
+    Route::get('pho-diem/{id}', 'Frontend\SearchController@phoDiem')->name('phoDiem');
 
     Route::post('login', 'Auth\AuthController@login');
 

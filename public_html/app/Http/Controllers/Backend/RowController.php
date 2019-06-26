@@ -194,7 +194,9 @@ class RowController extends BackendController {
         foreach ($rows as $index => $row) {
             $item = [];
             foreach ($columns as $col) {
-                $item[] = $row[$col->name];
+                if (!empty($col->edit)) {
+                    $item[] = $row[$col->name];
+                }
             }
             $sheetData[] = $item;
         }

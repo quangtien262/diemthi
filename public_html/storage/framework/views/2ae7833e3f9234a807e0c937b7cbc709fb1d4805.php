@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -20,15 +21,14 @@
     <!-- Fixed navbar -->
     <?php echo $__env->make('frontend.element.layout.header2', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>
 
-    <div class="container">
-        <div class='main_content'>
             <?php echo $__env->yieldContent('content'); ?>
-        </div>
-        <div class="clearfix"></div>
-    </div>
-    <div style="margin-top: 70px;background:#f2f2f2;" class="footer">
-        <?php echo $__env->make('frontend.element.layout.footer', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>
         
+    <div style="margin-top: 70px;background:#f2f2f2;" class="footer">
+        <?php if($agent->isMobile()): ?>
+            <?php echo $__env->make('frontend.element.layout.footerMobile', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>
+        <?php else: ?>
+            <?php echo $__env->make('frontend.element.layout.footer', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>
+        <?php endif; ?>
     </div>
 </body>
 

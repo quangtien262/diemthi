@@ -1,0 +1,209 @@
+.input-sbd,
+.input-cum-thi {
+    border-radius: 0px
+}
+
+.input-sbd {
+    border-top: 0px
+}
+
+.icon-tab {
+    width: 80px;
+    margin-top: 15px
+}
+
+.highcharts-container {
+    position: relative;
+    overflow: hidden;
+    width: 391px;
+    height: 650px;
+    text-align: left;
+    line-height: normal;
+    z-index: 0;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    margin-left: -10px;
+}
+
+.highcharts-root {
+    font-family: 'arial';
+    font-size: 12px;
+}
+
+div.width100 {
+    width: 100% !important;
+}
+
+div {
+    max-width: 100%;
+}
+
+.news-item h3 {
+    font-weight: normal;
+    font-size: 13px;
+    color: #000000;
+    margin-top: 0px;
+}
+
+.title2 {
+    margin-top: 5px !important
+}
+
+.main-item-news div {
+    padding: 0px
+}
+
+.news-item02 {
+    padding-left: 8px !important
+}
+
+.main-ad01 {
+    padding: 0px
+}
+img {
+    vertical-align: middle;
+    border: 0;
+    max-width: 100%;
+    max-height: 100%;
+}
+.footer .row1 {
+    background-color: #F0F0F0;
+    padding: 25px 15px;
+}
+.footer .row1 ul:first-child {
+    padding-right: 25px;
+    border-right: 1px solid #ddd;
+}
+.footer .row1 ul {
+    width: 50%;
+    float: left;
+}
+.footer .row1 ul a {
+    font-family: Calibri,Tahoma,Helvetica,Arial,sans-serif;
+    display: block;
+    margin-bottom: 10px;
+}
+
+a {
+    text-decoration: none;
+    color: #505050;
+}
+.footer .row1 ul {
+    width: 50%;
+    float: left;
+}
+.pdL25 {
+    padding-left: 25px;
+}
+.guiBai {
+    text-align: right;
+}
+
+.mgT25 {
+    margin-top: 25px;
+}
+.footer .row2 {
+    background-color: #a0a0a0;
+    padding: 15px 10px 10px;
+}
+.footer .row3 {
+    background-color: #505050;
+    padding: 10px;
+    color: #fff;
+    overflow: hidden;
+}
+.lineWhite {
+    border-bottom: 1px solid #FFF;
+    margin: 10px 0;
+}
+.bienTap p {
+    font-size: 13px;
+    color: #282828;
+    font-family: Calibri,Tahoma,Helvetica,Arial,sans-serif;
+    margin: 5px 0 0;
+}
+.footer .row3 {
+    background-color: #505050;
+    padding: 10px;
+    color: #fff;
+    overflow: hidden;
+}
+.hlqc a {
+    color: #fff;
+    font-size: 15px;
+}
+.icoHotLine {
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+    background: url(//cdn.baogiaothong.vn/images/Untitled-10.png) no-repeat;
+    vertical-align: -7px;
+}
+.footer .row3 .fl {
+    width: 80%;
+}
+.btTop {
+}
+.tSoan {
+    font-size: 13px;
+    margin-top: 15px;
+}
+.lineWhite {
+    border-bottom: 1px solid #FFF;
+    margin: 10px 0;
+}
+.gPhep {
+    font-size: 10px;
+    color: #A0A0A0;
+}
+.gPhep {
+    font-size: 10px;
+    color: #A0A0A0;
+}
+.btTop {
+    text-align: right;
+    margin-top: -90px;
+    width: 100%;
+    float: right;
+}
+.icoBtt {
+    display: inline-block;
+    width: 30px;
+    height: 26px;
+    background: url(//cdn.baogiaothong.vn/images/Untitled-12.png) no-repeat;
+}
+ul li {
+    list-style: none;
+}
+.hlqc a {
+    color: #fff;
+    font-size: 15px;
+}
+
+.fr {
+    float: right;
+}
+.setw70 {
+    width: 70%;
+}
+
+.tiengNoi {
+    font-size: 12px;
+    color: #000;
+    font-family: Myriad Pro,Tahoma,Helvetica,Arial,sans-serif;
+}
+.fl {
+    float: left;
+}
+.setw30 {
+    width: 30%;
+}
+
+.fr {
+    float: right;
+}
+.mgT5 {
+    margin-top: 5px;
+}
+.lw1 {
+    margin-top: 45px;
+}

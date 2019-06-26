@@ -9,19 +9,19 @@
                 <div class="row">
                     <div class="col-md-4">
                         <div class="logoBgt mgBt15">
-                            <a href="http://www.baogiaothong.vn/">
-                                <img src="http://cdn.baogiaothong.vn/images/logo_footer.png" class="loading"
+                            <a href="https://www.baogiaothong.vn/">
+                                <img src="https://cdn.baogiaothong.vn/images/logo_footer.png" class="loading"
                                     data-was-processed="true">
                             </a>
                         </div>
                         <br/>
                         <div>
-                            <a href="http://xe.baogiaothong.vn/" class="logoXgt">
-                                <img src="http://cdn.baogiaothong.vn/images/Bieu-tuong1.png" class="loading"
+                            <a href="https://xe.baogiaothong.vn/" class="logoXgt">
+                                <img src="https://cdn.baogiaothong.vn/images/Bieu-tuong1.png" class="loading"
                                     data-was-processed="true">
                             </a>
-                            <a href="http://www.atgt.vn/">
-                                <img src="http://cdn.baogiaothong.vn/images/Bieu-tuong2.png" class="loading"
+                            <a href="https://www.atgt.vn/">
+                                <img src="https://cdn.baogiaothong.vn/images/Bieu-tuong2.png" class="loading"
                                     data-was-processed="true">
                             </a>
                         </div>
